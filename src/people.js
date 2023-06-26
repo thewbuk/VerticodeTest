@@ -40,7 +40,7 @@ export default function People() {
     <PageHeader headline={"People"} actions={<Button text="Add Person" onClick={() => { addPerson() }}></Button>}></PageHeader>
     <div className="flex">
       <div className="w-full max-w-5xl pb-20 mx-auto my-10 2xl:max-w-6xl">
-          <Button text="Toggle High Rated" onClick={() => setShowHighRated(prev => !prev)} className={showHighRated ? "bg-blue-500  rounded-2xl hover:bg-blue-800" : "bg-red-500  rounded-2xl hover:bg-red-800"}/>         <div>
+        <Button text={showHighRated ? "Toggle Off High Rated" : "Toggle High Rated"} onClick={() => setShowHighRated(prev => !prev)} className={showHighRated ? "bg-blue-500  rounded-2xl hover:bg-blue-800" : "bg-red-500  rounded-2xl hover:bg-red-800"}/>         <div>
           <Table
             data={highRatedPeople.map(x => {
               // return {
