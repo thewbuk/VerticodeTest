@@ -24,7 +24,7 @@ function GlobalFilter({
                     setValue(e.target.value);
                     onChange(e.target.value);
                 }}
-                className="p-2 my-3 rounded border border-neutral-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                className="p-2 my-3 border rounded border-neutral-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 placeholder={`Search...`}
             />
         </div>
@@ -54,7 +54,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                             <tr {...headerGroup.getHeaderGroupProps()}>
                                 {
                                     headerGroup.headers.map(column => (
-                                        <th {...column.getHeaderProps()} className="bg-neutral-100 px-6 py-3 text-left text-sm font-semibold text-neutral-900">
+                                        <th {...column.getHeaderProps()} className="px-6 py-3 text-sm font-semibold text-left bg-neutral-100 text-neutral-900">
                                             {
                                                 column.render('Header')}
                                             <span>
@@ -69,7 +69,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                             </tr>
                         ))}
                 </thead>
-                <tbody className="divide-y divide-neutral-200 bg-white"  {...getTableBodyProps()}>
+                <tbody className="bg-white divide-y divide-neutral-200"  {...getTableBodyProps()}>
                     {
                         rows.map(row => {
                             prepareRow(row)
@@ -78,7 +78,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                                     {
                                         row.cells.map(cell => {
                                             return (
-                                                <td {...cell.getCellProps()} className="whitespace-nowrap px-6 py-4 text-sm text-neutral-900">
+                                                <td {...cell.getCellProps()} className="px-6 py-4 text-sm whitespace-nowrap text-neutral-900">
                                                     {
                                                         cell.render('Cell')}
                                                 </td>
@@ -146,7 +146,7 @@ export default function Table({ columns, data, exportData, exportColumns, onRowC
                                 <tr {...headerGroup.getHeaderGroupProps()}>
                                     {
                                         headerGroup.headers.map(column => (
-                                            <th {...column.getHeaderProps(column.getSortByToggleProps())} className="bg-neutral-100 px-6 py-3 text-left text-sm font-semibold text-neutral-900">
+                                            <th {...column.getHeaderProps(column.getSortByToggleProps())} className="px-6 py-3 text-sm font-semibold text-left bg-neutral-100 text-neutral-900">
                                                 {
                                                     column.render('Header')}
                                                 <span>
@@ -161,7 +161,7 @@ export default function Table({ columns, data, exportData, exportColumns, onRowC
                                 </tr>
                             ))}
                     </thead>
-                    <tbody className="divide-y divide-neutral-200 bg-white"  {...getTableBodyProps()}>
+                    <tbody className="bg-white divide-y divide-neutral-200"  {...getTableBodyProps()}>
                         {
                             rows.map(row => {
                                 prepareRow(row)
@@ -170,7 +170,7 @@ export default function Table({ columns, data, exportData, exportColumns, onRowC
                                         {
                                             row.cells.map(cell => {
                                                 return (
-                                                    <td {...cell.getCellProps()} className="whitespace-nowrap px-6 py-4 text-sm text-neutral-900">
+                                                    <td {...cell.getCellProps()} className="px-6 py-4 text-sm whitespace-nowrap text-neutral-900">
                                                         {
                                                             cell.render('Cell')}
                                                     </td>
