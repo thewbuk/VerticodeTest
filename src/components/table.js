@@ -24,7 +24,7 @@ function GlobalFilter({
                     setValue(e.target.value);
                     onChange(e.target.value);
                 }}
-                className="p-2 my-3 border rounded border-neutral-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                className="p-2 my-10 border rounded border-neutral-300 focus:ring-blue-500 sm:text-sm rainbow-ring"
                 placeholder={`Search...`}
             />
         </div>
