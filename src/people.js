@@ -29,7 +29,9 @@ export default function People() {
   else if (person.yearsOfExperience < 5) weight = 1.2;
   else weight = 1.4;
   
-  return person.rating * weight;
+  return Number((person.rating * weight).toFixed(2));
+  // return (person.rating * weight).toFixed(2);
+  // return person.rating * weight;
 }
 
   if (!data) return <Loading></Loading>
