@@ -43,8 +43,11 @@ export default function People() {
           <Button text="Toggle High Rated" onClick={() => setShowHighRated(prev => !prev)} className={showHighRated ? "bg-blue-500  rounded-2xl hover:bg-blue-800" : "bg-red-500  rounded-2xl hover:bg-red-800"}/>         <div>
           <Table
             data={highRatedPeople.map(x => {
+              // return {
+              //   ...x, firstName: x.firstName
+              // }
               return {
-                ...x, firstName: x.firstName, middleName: x.middleName, lastName: x.lastName, title: x.title
+                ...x
               }
             })} columns={[
               {
